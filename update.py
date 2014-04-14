@@ -22,7 +22,7 @@ def update(email, api_key, zone, domain):
     for record in records:
         if record['name'] == domain:
             hostname = re.sub('\.{0}$'.format(zone), '', domain)
-            resp = cf.rec_edit(zone, 'A', record['rec_id'], name, ip, ttl=1)
+            resp = cf.rec_edit(zone, 'A', record['rec_id'], hostname, ip, ttl=1)
             return ('Successfully updated', 200)
             break
 
