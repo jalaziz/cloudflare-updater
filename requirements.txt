@@ -1,0 +1,4 @@
+gevent
+uwsgi
+Flask
+git+git://github.com/jalaziz/pyflare.git
